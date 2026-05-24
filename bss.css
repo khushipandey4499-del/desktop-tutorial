@@ -1,0 +1,107 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f6f9;
+        }
+
+        .calculator {
+            width: 320px;
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+        }
+
+        .display {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 24px;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .previous-operand {
+            color: #9ea7b1;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            min-height: 1.5rem;
+        }
+
+        .current-operand {
+            color: #1a1d20;
+            font-size: 2.5rem;
+            font-weight: 500;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            height: 60px;
+            border-radius: 16px;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.1s ease, transform 0.05s ease;
+            user-select: none;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Number buttons */
+        .btn-number {
+            background-color: #f3f4f6;
+            color: #1a1d20;
+        }
+        .btn-number:hover {
+            background-color: #e5e7eb;
+        }
+
+        /* Operator buttons (+, -, *, /) */
+        .btn-operator {
+            background-color: #ff9f0a;
+            color: white;
+        }
+        .btn-operator:hover {
+            background-color: #e08b07;
+        }
+
+        /* Utility buttons (AC, DEL, %) */
+        .btn-utility {
+            background-color: #e5e7eb;
+            color: #4b5563;
+        }
+        .btn-utility:hover {
+            background-color: #d1d5db;
+        }
+
+        /* Equals button gets emphasis */
+        .btn-equals {
+            background-color: #10b981;
+            color: white;
+        }
+        .btn-equals:hover {
+            background-color: #059669;
+        }
